@@ -79,6 +79,7 @@ table {
 th, td {
   text-align: center;
   padding: 14px;
+  white-space: nowrap;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -231,4 +232,23 @@ td#shop > span  {
   margin: 0 5px;
   border: green;
   border-radius: 10px;
+}
+
+
+@media (max-width: 600px) {
+  #time-display {
+    display: none;
+  }
+  .stock-change-items {
+    flex-direction: column;
+    gap: 0;
+  }
+  .stock-change-box .btn, #search-sku .btn, #search-sku input[type=number] {
+    width: 100% !important;
+  }
+  .input-icon {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }

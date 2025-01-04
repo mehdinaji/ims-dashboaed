@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleStockChange() {
     if (increaseStock.checked) {
-      increaseBox.style.display = "block";
+      increaseBox.style.display = "flex";
       decreaseBox.style.display = "none";
     } else if (decreaseStock.checked) {
       increaseBox.style.display = "none";
-      decreaseBox.style.display = "block";
+      decreaseBox.style.display = "flex";
     }
   }
 
