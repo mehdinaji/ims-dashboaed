@@ -10,7 +10,9 @@ body, h1, h2, h3, h4, h5, h6, input {
 }
 
 /* inputs */
-input[type=number], input[type=text] {
+input[type=number], 
+input[type=text],
+input[type=password]  {
   height: 40px;
   border-radius: 5px;
   outline: 0;
@@ -24,6 +26,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type=password] {
+  direction: ltr;
 }
 
 input[type=number] {
@@ -234,6 +240,38 @@ td#shop > span  {
   border-radius: 10px;
 }
 
+.container-login {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100dvh - 40px);
+}
+
+.container-login .box {
+  background: paleturquoise;
+}
+
+.container-login .box {
+  width: 30%;
+}
+
+.container-login input {
+  width: 75%;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.form-login img {
+  margin: 20px 0;
+}
 
 @media (max-width: 600px) {
   #time-display {
@@ -243,7 +281,7 @@ td#shop > span  {
     flex-direction: column;
     gap: 0;
   }
-  .stock-change-box .btn, #search-sku .btn, #search-sku input[type=number] {
+  .stock-change-box .btn, #search-sku .btn, input, .container-login .box, .container-login .btn {
     width: 100% !important;
   }
   .input-icon {
