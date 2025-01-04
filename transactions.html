@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="scripts/timeNow.js"></script>
+  <script src="scripts/stockNumber.js"></script>
+  <script src="scripts/stockChanges.js"></script>
+  <script src="scripts/formatNumber.js"></script>
+  <script src="scripts/shopFirstCharacter.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <title>pharma-plus</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<body>
+
+  <!-- start header -->
+  <header>
+    <div>
+      <img src="./img/Logo.png" alt="logo" width="150">
+    </div>
+    <div id="time-display">
+      time
+    </div>
+    <div>
+      پشتیبان
+    </div>
+  </header>
+  <!-- end header -->
+  <div class="container">
+
+    <!-- start teabe box -->
+    <div class="box">
+      <h4> لیست تغییرات موجودی " ویتامین B " </h4>
+      <div class="container-table" id="table-transactions">
+        <table>
+          <tr>
+            <th>فروشگاه</th>
+            <th>موجودی اولیه</th>
+            <th>موجودی بعد از تغییر</th>
+            <th>میزان تغییر</th>
+            <th>زمان</th>
+            <th>توضیحات</th>
+          </tr>
+          <tr>
+            <td id="shop">IMS</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td id="stock-changes"> 5</td>
+            <td> 2025-01-04 00:09:42 </td>
+            <td>آقای احمدی، چهار کارتن در انبار بالا</td>
+          </tr>
+          <tr>
+            <td id="shop">pharma-plus</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td id="stock-changes"> -5</td>
+            <td> 2025-01-04 00:09:42 </td>
+            <td>آقای احمدی، چهار کارتن در انبار بالا</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- end table box -->
+
+    <!-- start change stock box -->
+    <div class="box">
+      <h4> تغییر موجودی </h4>
+      <div class="stock-change-items">
+        <div>
+          <label>
+            <input type="radio" name="stock-change" value="increase" id="increase-stock" checked>
+            افزایش موجودی
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="stock-change" value="decrease" id="decrease-stock">
+            کاهش موجودی
+          </label>
+        </div>
+      </div>
+
+      <div class="stock-change-boxs">
+        <!-- increase-item -->
+        <div class="stock-change-box increase">
+          <h4>شما در افزایش موجودی "ویتامین B" هستید.</h4>
+          <p> میزان افزایش را بنویسید. </p>
+          <div class="input-icon">
+            <img src="./img/up.gif" alt="up" width="40">
+            <input type="number" placeholder="عدد افزایش">
+          </div>
+          <input type="text" placeholder="توضیحات، مثلا شماره فاکتور">
+          <button class="btn btn-success">
+            <i class="fa fa-arrow-up"></i> افزایش بده
+          </button>
+        </div>
+        <!-- decrease-item -->
+        <div class="stock-change-box decrease" style="display: none;">
+          <h4>شما در کاهش موجودی "ویتامین B" هستید.</h4>
+          <p> میزان کاهش را بنویسید. </p>
+          <input type="number" placeholder="عدد کاهش">
+          <input type="text" placeholder="توضیحات علت کاهش دستی موجودی">
+          <button class="btn btn-danger">
+            <i class="fa fa-arrow-down"></i> کاهش بده
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- end change stock box -->
+  </div>
+</body>
+
+</html>
