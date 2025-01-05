@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     circle.style.height = "10px";
     circle.style.display = "inline-block";
     circle.style.borderRadius = "50%";
-    circle.style.marginLeft = "8px"; 
+    circle.style.marginLeft = "8px";
 
     if (stockValue < 20) {
       circle.style.backgroundColor = "red";
+      circle.classList.add("animated-circle");
     } else if (stockValue < 100) {
       circle.style.backgroundColor = "gold";
     } else {
