@@ -7,7 +7,7 @@
 
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 
   <script src="../../scripts/timeNow.js"></script>
   <script src="../../scripts/stockNumber.js"></script>
@@ -40,7 +40,10 @@
 
     <!-- start teabe box -->
     <div class="box">
-      <h4> لیست تغییرات موجودی " ویتامین B " </h4>
+      <div class="flex">
+        <h4>ویتامین B</h4>
+        <h5> SKU (1234) </h5>
+      </div>
       <div class="container-table" id="table-transactions">
         <table>
           <tr>
@@ -93,23 +96,25 @@
       <div class="stock-change-boxs">
         <!-- increase-item -->
         <div class="stock-change-box increase">
-          <h4>شما در حال افزایش موجودی "ویتامین B" هستید.</h4>
+          <h4>ویتامین B</h4>
           <p> میزان افزایش را بنویسید. </p>
           <div class="input-icon">
             <img src="../../img/up.gif" alt="up" width="40">
             <input type="number" placeholder="عدد افزایش">
           </div>
           <input type="text" placeholder="توضیحات، مثلا شماره فاکتور">
+          <span> میزان و علت افزایش را بنویسید، سپس روی دکمه کلیک کنید. </span>
           <button class="btn btn-success">
             <i class="fa fa-arrow-up"></i> افزایش بده
           </button>
         </div>
         <!-- decrease-item -->
         <div class="stock-change-box decrease" style="display: none;">
-          <h4>شما در حال کاهش موجودی "ویتامین B" هستید.</h4>
+          <h4>ویتامین B</h4>
           <p> میزان کاهش را بنویسید. </p>
           <input type="number" placeholder="عدد کاهش">
           <input type="text" placeholder="توضیحات علت کاهش دستی موجودی">
+          <span> میزان و علت کاهش را بنویسید، سپس روی دکمه کلیک کنید. </span>
           <button class="btn btn-danger">
             <i class="fa fa-arrow-down"></i> کاهش بده
           </button>
