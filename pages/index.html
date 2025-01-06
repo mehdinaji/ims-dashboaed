@@ -13,6 +13,7 @@
   <script src="../scripts/timeNow.js"></script>
   <script src="../scripts/stockNumber.js"></script>
   <script src="../scripts/formatNumber.js"></script>
+  <script src="../scripts/sidebar.js"></script>
 
   <link rel="stylesheet" href="../style.css">
   <title>pharma-plus</title>
@@ -20,66 +21,105 @@
 </head>
 
 <body>
-
-  <!-- start header -->
-  <header>
-    <div>
-      <img src="../img/Logo.png" alt="logo" width="150">
-    </div>
-    <div id="time-display">
-      time
-    </div>
-    <div>
-      پشتیبان
-    </div>
-  </header>
-  <!-- end header -->
-  <div class="container">
-
-    <!-- search box -->
-    <div class="box">
-      <h4> جستجوی محصول </h4>
-      <p> برای جستجوی محصول SKU محصول مورد نظر را وارد کنید. </p>
-      <div id="search-sku">
-        <input type="number">
-        <button class="btn">
-          <i class="fa fa-search"></i> جستجو
-        </button>
+  <main>
+    <aside id="sidebar">
+      <div class="top">
+        <a href="#">
+          <img src="../img/Logo.png" alt="logo" width="150">
+        </a>
+        <span id="close-sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
       </div>
-    </div>
-    <!-- search box -->
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span> خانه </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-layer-group"></i>
+              <span> انبار </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span> تغییرات </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <!-- start header -->
+      <header>
+        <div>
+          <p> صفحه اصلی </p>
+        </div>
+        <div id="time-display">
+          time
+        </div>
+        <div>
+          <div id="show-profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div id="open-sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <div class="container">
+        <!-- search box -->
+        <div class="box">
+          <h4> جستجوی محصول </h4>
+          <p> برای جستجوی محصول SKU محصول مورد نظر را وارد کنید. </p>
+          <div id="search-sku">
+            <input type="number">
+            <button class="btn">
+              <i class="fa fa-search"></i> جستجو
+            </button>
+          </div>
+        </div>
+        <!-- search box -->
 
-    <!-- teabe box -->
-    <div class="box">
-      <h4> محصولات </h4>
-      <p> آخرین تغییرات </p>
-      <div class="container-table">
-        <table>
-          <tr>
-            <th>محصول</th>
-            <th>SKU</th>
-            <th>موجودی</th>
-            <th>بروزرسانی</th>
-          </tr>
-          <tr>
-            <td>شامپو بچه</td>
-            <td>
-              <span>
-                12345
-              </span>
-              <span class="btn-icon">
-                <i class="fa-solid fa-square-arrow-up-right" style="color: #006ab1;"></i>
-              </span>
-            </td>
-            <td id="stock"> 5</td>
-            <td>50</td>
-          </tr>
-        </table>
+        <!-- teabe box -->
+        <div class="box">
+          <h4> محصولات </h4>
+          <p> آخرین تغییرات </p>
+          <div class="container-table">
+            <table>
+              <tr>
+                <th>محصول</th>
+                <th>SKU</th>
+                <th>موجودی</th>
+                <th>بروزرسانی</th>
+              </tr>
+              <tr>
+                <td>شامپو بچه</td>
+                <td>
+                  <span>
+                    12345
+                  </span>
+                  <span class="btn-icon">
+                    <i class="fa-solid fa-square-arrow-up-right" style="color: #006ab1;"></i>
+                  </span>
+                </td>
+                <td id="stock"> 5</td>
+                <td>50</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- table box -->
+
       </div>
-    </div>
-    <!-- table box -->
-
-  </div>
+    </section>
+  </main>
 </body>
 
 </html>
