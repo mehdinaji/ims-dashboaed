@@ -32,7 +32,7 @@ input {
 }
 
 input[type="radio"] {
-  width: 15px;
+  width: 15px !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -95,6 +95,7 @@ text-align: center;
   overflow-x: auto;
   margin: 20px 0;
   border-radius: 5px;
+  background: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -200,12 +201,28 @@ a {
   text-decoration: none;
 }
 
+.icon-btn {
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: #f2f2f2;
+}
+
 /******************************************* END PUBLIC ********************************************/
 
 .top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 65px;
   padding: 20px;
   border-bottom: 1px solid #e5e7eb;
@@ -227,7 +244,8 @@ section {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 header {
@@ -237,6 +255,7 @@ header {
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
   padding: 20px;
+  height: 72px;
 }
 
 header > div {
@@ -507,6 +526,11 @@ background: linear-gradient(90deg, rgba(255, 229, 255, 1) 0%, rgba(204, 204, 255
 }
 
 @media (max-width: 750px) {
+  .top {
+    background: #fff;
+    justify-content: space-between;
+    height: 72px;
+  }
   aside {
     display: none;
   }

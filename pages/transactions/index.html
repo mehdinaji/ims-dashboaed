@@ -15,7 +15,7 @@
   <script src="../../scripts/stockChanges.js"></script>
   <script src="../../scripts/formatNumber.js"></script>
   <script src="../../scripts/shopFirstCharacter.js"></script>
-
+  <script src="../../scripts/sidebar.js"></script>
 
   <link rel="stylesheet" href="../../style.css">
   <title>pharma-plus</title>
@@ -23,112 +23,152 @@
 </head>
 
 <body>
-
-  <!-- start header -->
-  <header>
-    <div>
-      <img src="../../img/Logo.png" alt="logo" width="150">
-    </div>
-    <div id="time-display">
-      time
-    </div>
-    <div>
-      پشتیبان
-    </div>
-  </header>
-  <!-- end header -->
-  <div class="container">
-    <!-- start teabe box -->
-    <div class="box">
-      <div class="flex">
-        <h4>ویتامین B</h4>
-        <!-- start chip -->
-        <div class="chip">
-          <div class="chip-head">SK</div>
-          <div class="chip-content">12345</div>
-        </div>
-        <!-- end chip -->
+  <main>
+    <aside id="sidebar">
+      <div class="top">
+        <a href="#">
+          <img src="../../img/Logo.png" alt="logo" width="150">
+        </a>
+        <span class="icon-btn" id="close-sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
       </div>
-    </div>
-    <div class="container-table" id="table-transactions">
-      <table>
-        <tr>
-          <th>فروشگاه</th>
-          <th>موجودی اولیه</th>
-          <th>موجودی بعد از تغییر</th>
-          <th>میزان تغییر</th>
-          <th>زمان</th>
-          <th>توضیحات</th>
-        </tr>
-        <tr>
-          <td id="shop">IMS</td>
-          <td>1000</td>
-          <td>2000</td>
-          <td id="stock-changes"> 5 </td>
-          <td> 2025-01-04 00:09:42 </td>
-          <td>آقای احمدی، چهار کارتن در انبار بالا</td>
-        </tr>
-        <tr>
-          <td id="shop">pharma-plus</td>
-          <td>1000</td>
-          <td>2000</td>
-          <td id="stock-changes"> -5</td>
-          <td> 2025-01-04 00:09:42 </td>
-          <td>آقای احمدی، چهار کارتن در انبار بالا</td>
-        </tr>
-      </table>
-    </div>
-    <!-- end table box -->
-
-    <!-- start change stock box -->
-    <div class="box">
-      <h4> تغییر موجودی </h4>
-      <div class="stock-change-items">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span> خانه </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-layer-group"></i>
+              <span> انبار </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span> تغییرات </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <!-- start header -->
+      <header>
         <div>
-          <label>
-            <input type="radio" name="stock-change" value="increase" id="increase-stock" checked>
-            افزایش موجودی
-          </label>
+          <p> تغییر موجودی </p>
+        </div>
+        <div id="time-display">
+          time
         </div>
         <div>
-          <label>
-            <input type="radio" name="stock-change" value="decrease" id="decrease-stock">
-            کاهش موجودی
-          </label>
-        </div>
-      </div>
-
-      <div class="stock-change-boxs">
-        <!-- increase-item -->
-        <div class="stock-change-box increase">
-          <h4>ویتامین B</h4>
-          <p> میزان افزایش را بنویسید. </p>
-          <div class="input-icon">
-            <img src="../../img/up.gif" alt="up" width="40">
-            <input type="number" placeholder="عدد افزایش">
+          <div class="icon-btn" id="show-profile">
+            <i class="fa-solid fa-user"></i>
           </div>
-          <input type="text" placeholder="توضیحات، مثلا شماره فاکتور">
-          <span> میزان و علت افزایش را بنویسید، سپس روی دکمه کلیک کنید. </span>
-          <button class="btn btn-success">
-            <i class="fa-solid fa-arrow-trend-up fa-fade"></i> افزایش بده
-          </button>
+          <div class="icon-btn" id="open-sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
-        <!-- decrease-item -->
-        <div class="stock-change-box decrease" style="display: none;">
-          <h4>ویتامین B</h4>
-          <p> میزان کاهش را بنویسید. </p>
-          <input type="number" placeholder="عدد کاهش">
-          <input type="text" placeholder="توضیحات علت کاهش دستی موجودی">
-          <span> میزان و علت کاهش را بنویسید، سپس روی دکمه کلیک کنید. </span>
-          <button class="btn btn-danger">
-            <i class="fa fa-arrow-down"></i> کاهش بده
-          </button>
+      </header>
+      <!-- end header -->
+      <div class="container">
+        <!-- search box -->
+        <div class="box">
+          <div class="flex">
+            <h4>ویتامین B</h4>
+            <!-- start chip -->
+            <div class="chip">
+              <div class="chip-head">SK</div>
+              <div class="chip-content">12345</div>
+            </div>
+            <!-- end chip -->
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- end change stock box -->
-  </div>
 
+        <div class="container-table" id="table-transactions">
+          <table>
+            <tr>
+              <th>فروشگاه</th>
+              <th>موجودی اولیه</th>
+              <th>موجودی بعد از تغییر</th>
+              <th>میزان تغییر</th>
+              <th>زمان</th>
+              <th>توضیحات</th>
+            </tr>
+            <tr>
+              <td id="shop">IMS</td>
+              <td>1000</td>
+              <td>2000</td>
+              <td id="stock-changes"> 5 </td>
+              <td> 2025-01-04 00:09:42 </td>
+              <td>آقای احمدی، چهار کارتن در انبار بالا</td>
+            </tr>
+            <tr>
+              <td id="shop">pharma-plus</td>
+              <td>1000</td>
+              <td>2000</td>
+              <td id="stock-changes"> -5</td>
+              <td> 2025-01-04 00:09:42 </td>
+              <td>آقای احمدی، چهار کارتن در انبار بالا</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- start change stock box -->
+        <div class="box">
+          <h4> تغییر موجودی </h4>
+          <div class="stock-change-items">
+            <div>
+              <label>
+                <input type="radio" name="stock-change" value="increase" id="increase-stock" checked>
+                افزایش موجودی
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="stock-change" value="decrease" id="decrease-stock">
+                کاهش موجودی
+              </label>
+            </div>
+          </div>
+
+          <div class="stock-change-boxs">
+            <!-- increase-item -->
+            <div class="stock-change-box increase">
+              <h4>ویتامین B</h4>
+              <p> میزان افزایش را بنویسید. </p>
+              <div class="input-icon">
+                <img src="../../img/up.gif" alt="up" width="40">
+                <input type="number" placeholder="عدد افزایش">
+              </div>
+              <input type="text" placeholder="توضیحات، مثلا شماره فاکتور">
+              <span> میزان و علت افزایش را بنویسید، سپس روی دکمه کلیک کنید. </span>
+              <button class="btn btn-success">
+                <i class="fa-solid fa-arrow-trend-up fa-fade"></i> افزایش بده
+              </button>
+            </div>
+            <!-- decrease-item -->
+            <div class="stock-change-box decrease" style="display: none;">
+              <h4>ویتامین B</h4>
+              <p> میزان کاهش را بنویسید. </p>
+              <input type="number" placeholder="عدد کاهش">
+              <input type="text" placeholder="توضیحات علت کاهش دستی موجودی">
+              <span> میزان و علت کاهش را بنویسید، سپس روی دکمه کلیک کنید. </span>
+              <button class="btn btn-danger">
+                <i class="fa fa-arrow-down"></i> کاهش بده
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- end change stock box -->
+
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
