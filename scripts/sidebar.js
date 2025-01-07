@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeSidebar?.addEventListener('click', () => {
     sidebar?.classList.remove('show-sidebar');
+    section.style.display = 'block';
   });
 
   listItems.forEach(item => {
     item.addEventListener('click', () => {
     sidebar?.classList.remove('show-sidebar');
-    section.style.display = 'flex';
+    section.style.display = 'block';
     });
   });
 });
